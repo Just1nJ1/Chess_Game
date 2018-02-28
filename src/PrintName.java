@@ -7,6 +7,7 @@ public class PrintName {
     }
 
     //test
+    //test2
 
     public static void main (String... args){
         new PrintName ();
