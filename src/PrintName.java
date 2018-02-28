@@ -6,7 +6,7 @@ public class PrintName {
         System.out.println("John");
     }
 
-    //test
+    //test1
     //test2
 
     public static void main (String... args){
