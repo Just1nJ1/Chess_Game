@@ -6,6 +6,8 @@ public class PrintName {
         System.out.println("John");
     }
 
+    //test
+
     public static void main (String... args){
         new PrintName ();
     }
