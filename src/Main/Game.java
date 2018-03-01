@@ -32,7 +32,7 @@ public class Game {
                 else {System.out.print("|" + " "+board.get(i).get(j).getChessman()+" ");}
             }
             System.out.println("|");
-        }
+        }///
         System.out.print(" ");
         for (int j = 0; j < 8; j++) {
             System.out.print("-----");
