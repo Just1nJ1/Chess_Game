@@ -39,10 +39,13 @@ public class Game {
             }
             System.out.println("|");
             for (int j = 0; j < 8; j++) {
-                if (board.get(i).get(j).getChessman()==null){
-                System.out.print("|" + "   ");}
-                else {System.out.print("|" + " "+board.get(i).get(j).getChessman()+" ");}
+                if (board.get(i).get(j).getChessman() == null) {
+                    System.out.print("|" + "   ");
+                } else {
+                    System.out.print("|" + " " + board.get(i).get(j).getChessman() + " ");
+                }
             }
             System.out.println("|");
+        }
     }
 }
