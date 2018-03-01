@@ -22,10 +22,13 @@ public class Game {
             for (Cell tempC : tempAL){
                 str += tempC;
             }
-            str += "\n";
+            str += "\n\n";
         }
         return str;
-    }//
+    }
+
+    public void showBoard (){ showBoard ( this.board ); }
+
     public void showBoard(ArrayList<ArrayList<Cell>> board) {
         String alphebt[] = {"a", "b", "c", "d", "e", "f", "g", "h"};
         for (int i = 0; i < 8; i++) {
@@ -40,7 +43,7 @@ public class Game {
             System.out.println("|");
             for (int j = 0; j < 8; j++) {
                 if (board.get(i).get(j).getChessman() == null) {
-                    System.out.print("|" + "   ");
+                    System.out.print("|" + "    ");
                 } else {
                     System.out.print("|" + " " + board.get(i).get(j).getChessman() + " ");
                 }
