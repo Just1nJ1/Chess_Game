@@ -9,7 +9,9 @@ public class Cell {
         this.posX = posX;
         this.posY = posY;
     }
-
+    public Chessman getChessman() {
+        return chessman;
+    }
     @Override
     public String toString (){
         if (chessman != null) {
