@@ -10,6 +10,10 @@ public class Cell {
         this.posY = posY;
     }
 
+    public Chessman getChessman() {
+        return chessman;
+    }
+
     @Override
     public String toString (){
         return "" + posX + posY + chessman;

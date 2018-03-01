@@ -14,4 +14,28 @@ public class Game {
             tempAL = null;
         }
     }
+    public void showBoard(ArrayList<ArrayList<Cell>> board) {
+        String alphebt[] = {"a", "b", "c", "d", "e", "f", "g", "h"};
+        for (int i = 0; i < 8; i++) {
+            System.out.print(" ");
+            for (int j = 0; j < 8; j++) {
+                System.out.print("-----");
+            }
+            System.out.println();
+            for (int j = 0; j < 8; j++) {
+                System.out.print("|" + " " + alphebt[i] + (j + 1) + " ");
+            }
+            System.out.println("|");
+            for (int j = 0; j < 8; j++) {
+                if (board.get(i).get(j).getChessman()==null){
+                System.out.print("|" + "   ");}
+                else {System.out.print("|" + " "+board.get(i).get(j).getChessman()+" ");}
+            }
+            System.out.println("|");
+        }
+        System.out.print(" ");
+        for (int j = 0; j < 8; j++) {
+            System.out.print("-----");
+        }
+    }
 }
