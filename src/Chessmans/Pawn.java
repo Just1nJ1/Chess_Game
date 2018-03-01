@@ -1,4 +1,8 @@
 package Chessmans;
 
-public class Pawn {
+public class Pawn extends Main.Chessman {
+    @Override
+    public boolean move() {
+        return false;
+    }
 }
