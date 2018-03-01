@@ -4,6 +4,7 @@ public class PrintName {
         System.out.println("Jeffery");
         System.out.println("Justin");
         System.out.println("John");
+        System.out.println("Sebastian");
     }
 
     //test1
