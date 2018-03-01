@@ -32,11 +32,7 @@ public class Game {
     public void showBoard(ArrayList<ArrayList<Cell>> board) {
         String alphebt[] = {"a", "b", "c", "d", "e", "f", "g", "h"};
         for (int i = 0; i < 8; i++) {
-            System.out.print(" ");
-            for (int j = 0; j < 8; j++) {
-                System.out.print("-----");
-            }
-            System.out.println();
+            System.out.println("-----------------------------------------");
             for (int j = 0; j < 8; j++) {
                 System.out.print("|" + " " + alphebt[i] + (j + 1) + " ");
             }
@@ -50,5 +46,6 @@ public class Game {
             }
             System.out.println("|");
         }
+        System.out.print("-----------------------------------------");
     }
 }
