@@ -3,15 +3,15 @@ package Main;
 import java.util.ArrayList;
 
 public class Game {
-    ArrayList<ArrayList<Cell>> board = new ArrayList<ArrayList<Cell>> (  );
+    Cell[][] board = new Cell[8][8];
 
     public Game (){
         for (int tempY = 1; tempY < 9; tempY ++){
-            ArrayList<Cell> tempAL = new ArrayList<Cell> (  );
-            for (int tempX = 97; tempX < 105; tempX ++){
-                tempAL.add ( new Cell ( (char)tempX, tempY ) );
+            Cell[] tempAL = new Cell[8];
+            for (int tempX = 0; tempX < 8; tempX ++){
+                tempAL[tempX] = new Cell ( (char)(tempX+97), tempY );
             }
-            board.add ( tempAL );
+            board[tempY - 1] = tempAL;
             tempAL = null;
         }
 
@@ -25,7 +25,7 @@ public class Game {
     @Override
     public String toString () {
         String str = new String();
-        for (ArrayList<Cell> tempAL : board){
+        for (Cell[] tempAL : board){
             for (Cell tempC : tempAL){
                 str += tempC;
             }
