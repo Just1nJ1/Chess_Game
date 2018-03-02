@@ -66,11 +66,4 @@ public class Game {
         System.out.print("-----------------------------------------");
     }
 
-    public void setChessmen(){
-        boolean isWhite=true;
-        int position=
-        for(int i=0;i<2;i++){
-            for (int i)
-        }
-    }
 }
