@@ -35,13 +35,13 @@ public class Game {
     public String toString () {
         String str = new String();
         for (int i = 0; i < 8; i ++){
-            str += "\n" + (char)(104 - i);
+            str += "\n" + (8 - i);
             for (Cell tempC : board[i]){
                 str += tempC;
             }
             str += "\n";
         }
-        str += "   1     2     3     4     5     6     7     8";
+        str += "   a     b     c     d     e     f     g     h";
         return str;
     }
 
