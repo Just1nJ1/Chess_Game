@@ -1,5 +1,7 @@
 package Chessmans;
 
+import Main.Cell;
+
 public class Bishop extends Main.Chessman {
     public Bishop (boolean isWhite) {
         super.isWhite = isWhite;
@@ -7,7 +9,7 @@ public class Bishop extends Main.Chessman {
     }
 
     @Override
-    public boolean move(char posX, int posY) {
+    public boolean move(Cell currentCell, Cell goalCell) {
         return false;
     }
 }
