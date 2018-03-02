@@ -20,4 +20,8 @@ public class Cell {
             return "[ " + posX + posY + " ]";
         }
     }
+
+    public void setChessman(Chessman chessman) {
+        this.chessman = chessman;
+    }
 }

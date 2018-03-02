@@ -1,5 +1,7 @@
 package Main;
 
+import Chessmans.Bishop;
+
 import java.util.ArrayList;
 
 public class Game {
@@ -18,7 +20,15 @@ public class Game {
         initialChess ();
     }
 
-    private void initialChess (){
+    private void initialChess (Cell[][] board){
+        boolean isWhite=true;
+        int position=board.length-1;
+        for(int i=0;i<2;i++){
+            for (int j=0;j<8;j++){
+                board[][]
+            }
+        }
+    }
 
     }
 
@@ -36,7 +46,7 @@ public class Game {
 
     public void showBoard (){ showBoard ( this.board ); }
 
-    public void showBoard(ArrayList<ArrayList<Cell>> board) {
+    public void showBoard(Cell[][] board) {
         String alphebt[] = {"a", "b", "c", "d", "e", "f", "g", "h"};
         for (int i = 0; i < 8; i++) {
             System.out.println("-----------------------------------------");
@@ -45,14 +55,22 @@ public class Game {
             }
             System.out.println("|");
             for (int j = 0; j < 8; j++) {
-                if (board.get(i).get(j).getChessman() == null) {
+                if (board[i][j].getChessman() == null) {
                     System.out.print("|" + "    ");
                 } else {
-                    System.out.print("|" + " " + board.get(i).get(j).getChessman() + " ");
+                    System.out.print("|" + " " + board[i][j].getChessman() + " ");
                 }
             }
             System.out.println("|");
         }
         System.out.print("-----------------------------------------");
+    }
+
+    public void setChessmen(){
+        boolean isWhite=true;
+        int position=
+        for(int i=0;i<2;i++){
+            for (int i)
+        }
     }
 }
