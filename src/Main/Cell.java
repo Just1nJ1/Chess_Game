@@ -23,5 +23,6 @@ public class Cell {
 
     public void setChessman(Chessman chessman) {
         this.chessman = chessman;
+        chessman.currentCell = this;
     }
 }
