@@ -34,12 +34,14 @@ public class Game {
     @Override
     public String toString () {
         String str = new String();
-        for (Cell[] tempAL : board){
-            for (Cell tempC : tempAL){
+        for (int i = 0; i < 8; i ++){
+            str += "\n" + (char)(104 - i);
+            for (Cell tempC : board[i]){
                 str += tempC;
             }
-            str += "\n\n";
+            str += "\n";
         }
+        str += "   1     2     3     4     5     6     7     8";
         return str;
     }
 

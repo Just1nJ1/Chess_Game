@@ -17,7 +17,7 @@ public class Cell {
         if (chessman != null) {
             return "[" + posX + posY + chessman + "]";
         } else {
-            return "[ " + posX + posY + " ]";
+            return "[    ]";
         }
     }
 
