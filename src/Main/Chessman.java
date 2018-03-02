@@ -7,6 +7,6 @@ public abstract class Chessman {
 
     @Override
     public String toString() {
-        return isWhite ? "W" : "B" + name;
+        return (isWhite ? "W" : "B") + name;
     }
 }
