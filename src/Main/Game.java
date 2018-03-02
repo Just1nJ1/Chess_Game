@@ -8,16 +8,16 @@ public class Game {
     Cell[][] board = new Cell[8][8];
 
     public Game (){
-        for (int tempY = 1; tempY < 9; tempY ++){
+        for (int tempY = 8; tempY > 0; tempY --){
             Cell[] tempAL = new Cell[8];
             for (int tempX = 0; tempX < 8; tempX ++){
                 tempAL[tempX] = new Cell ( (char)(tempX+97), tempY );
             }
-            board[tempY - 1] = tempAL;
+            board[8 - tempY] = tempAL;
             tempAL = null;
         }
 
-        initialChess ();
+        //initialChess ();
     }
 
     private void initialChess (Cell[][] board){
@@ -25,12 +25,11 @@ public class Game {
         int position=board.length-1;
         for(int i=0;i<2;i++){
             for (int j=0;j<8;j++){
-                board[][]
+                //board[][]
             }
         }
     }
 
-    }
 
     @Override
     public String toString () {
