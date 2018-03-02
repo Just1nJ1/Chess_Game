@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Game {
     ArrayList<ArrayList<Cell>> board = new ArrayList<ArrayList<Cell>> (  );
+
     public Game (){
         for (int tempY = 1; tempY < 9; tempY ++){
             ArrayList<Cell> tempAL = new ArrayList<Cell> (  );
@@ -13,6 +14,12 @@ public class Game {
             board.add ( tempAL );
             tempAL = null;
         }
+
+        initialChess ();
+    }
+
+    private void initialChess (){
+
     }
 
     @Override
