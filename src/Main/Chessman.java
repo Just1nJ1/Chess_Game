@@ -1,7 +1,7 @@
 package Main;
 
 public abstract class Chessman {
-    public abstract boolean move ();
+    public abstract boolean move (char posX, char posY);
     public boolean isWhite;
     public char name;
     public boolean isMoved = false;

@@ -7,7 +7,7 @@ public class King extends Main.Chessman {
     }
 
     @Override
-    public boolean move() {
+    public boolean move(char posX, char posY) {
         return false;
     }
 }
