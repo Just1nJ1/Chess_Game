@@ -9,17 +9,17 @@ public class Board {
         board = new Chessman[8][8];
     }
 
-    public Board factor(){
+    public static Board factor(){
         Board board=new Board();
         boolean isWhite=false;
         for(int hor=1,i=0;i<2;i++){
             for (int ver=0;ver<8;ver++){
-                board.board[ver][hor]=new Pawn(isWhite);
+                board.board[hor][ver]=new Pawn(isWhite);
             }
             if(isWhite){hor+=1;}
             else{hor-=1;}
             for (int ver=0;ver<8;ver++){
-                board.board[ver][hor]=createChess(isWhite,ver);
+                board.board[hor][ver]=createChess(isWhite,ver);
             }
             isWhite=true;
             hor=6;
@@ -27,7 +27,7 @@ public class Board {
         return board;
     }
 
-    private Chessman createChess(boolean isWhite, int number){
+    private static Chessman createChess(boolean isWhite, int number){
         if (number>4){number=7-number;}
         Chessman[] chessmen={new Rook(isWhite),new Knight(isWhite),new Bishop(isWhite),new Queen(isWhite),new King(isWhite)};
         return chessmen[number];
@@ -41,7 +41,7 @@ public class Board {
             str+="\n"+i;
             for (int j = 0; j < 8; j++) {
                 if (board[i][j] != null) {
-                    str+= "["+board[i][j]+"]";
+                    str+= "[ "+board[i][j]+" ]";
                 } else {
                     str+= "[    ]";
                 }
