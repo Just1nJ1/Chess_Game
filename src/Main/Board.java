@@ -28,6 +28,7 @@ public class Board {
     }
 
     private Chessman createChess(boolean isWhite, int number){
+        if (number>4){number=7-number;}
         Chessman[] chessmen={new Rook(isWhite),new Knight(isWhite),new Bishop(isWhite),new Queen(isWhite),new King(isWhite)};
         return chessmen[number];
     }
