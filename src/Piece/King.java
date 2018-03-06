@@ -1,9 +1,9 @@
 package Piece;
 
 import Main.Board;
-import Main.piece;
+import Main.Piece;
 
-public class King extends piece {
+public class King extends Piece {
     public King (boolean isWhite) {
         super.isWhite = isWhite;
         super.name = 'K';

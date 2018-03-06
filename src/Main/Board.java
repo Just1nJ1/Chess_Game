@@ -3,12 +3,12 @@ package Main;
 import Piece.*;
 
 public class Board {
-    piece[][] board;
+    Piece[][] board;
 
     private Board() {
-        board = new piece[8][8];
+        board = new Piece[8][8];
     }
-    public piece[][] getBoard(){
+    public Piece[][] getBoard(){
         return board;
     }
 
@@ -31,9 +31,9 @@ public class Board {
         return board;
     }
 
-    private static piece createChess(boolean isWhite, int number){
+    private static Piece createChess(boolean isWhite, int number){
         if (number>4){number=7-number;}
-        piece[] chessmen={new Rook(isWhite),new Knight(isWhite),new Bishop(isWhite),new Queen(isWhite),new King(isWhite)};
+        Piece[] chessmen={new Rook(isWhite),new Knight(isWhite),new Bishop(isWhite),new Queen(isWhite),new King(isWhite)};
         return chessmen[number];
     }
 
