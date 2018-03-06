@@ -1,6 +1,6 @@
 package Main;
 
-import Chessmans.*;
+import Piece.*;
 
 public class Board {
     piece[][] board;
