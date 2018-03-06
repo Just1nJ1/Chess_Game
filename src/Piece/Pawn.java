@@ -1,4 +1,4 @@
-package Chessmans;
+package Piece;
 
 import Main.Board;
 import Main.piece;

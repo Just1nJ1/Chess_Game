@@ -1,12 +1,12 @@
-package Chessmans;
+package Piece;
 
 import Main.Board;
 import Main.piece;
 
-public class Queen extends piece {
-    public Queen (boolean isWhite) {
+public class Knight extends piece {
+    public Knight (boolean isWhite) {
         super.isWhite = isWhite;
-        super.name = 'Q';
+        super.name = 'N';
     }
 
     @Override
