@@ -8,7 +8,9 @@ public class Board {
     private Board() {
         board = new piece[8][8];
     }
-
+    public piece[][] getBoard(){
+        return board;
+    }
 
 
     public static Board factor(){
