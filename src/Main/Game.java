@@ -1,5 +1,5 @@
 package Main;
-
+import java.util.Scanner;
 public class Game {
     Cell[][] board = new Cell[8][8];
 
@@ -16,7 +16,19 @@ public class Game {
         //initialChess ();
     }
 
-
+    private void move(Board board){
+        Scanner scanner = new Scanner(System.in);
+        String start = scanner.next();
+        int startHor=Integer.valueOf((start.substring(0,1)));
+        int startVer=(start.substring(0,1)).charAt(1)-97;
+        String goal = scanner.next();
+        int goalHor=Integer.valueOf((start.substring(0,1)));
+        int goalVer=(start.substring(0,1)).charAt(1)-97;
+        Piece[][] nboard = board.getBoard();
+        boolean move=nboard[startHor][startVer].move(nboard,startHor,startVer,goalHor,goalVer);
+        if(!move){move(board);}
+        else {System.out.print("successful");}
+    }
 
     private void initialChess (Cell[][] board){
         boolean isWhite=true;

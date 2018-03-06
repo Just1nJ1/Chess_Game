@@ -1,7 +1,7 @@
 package Main;
 
-public abstract class piece {
-    public abstract boolean move (Board board, int startX,int startY,int goalX,int goalY);
+public abstract class Piece {
+    public abstract boolean move (Piece[][] board, int startX,int startY,int goalX,int goalY);
     public boolean isWhite;
     public char name;
     public boolean isMoved = false;
