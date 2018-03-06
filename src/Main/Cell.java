@@ -3,26 +3,26 @@ package Main;
 public class Cell {
     char posX;
     int posY;
-    piece piece = null;
+    Piece Piece = null;
 
     public Cell (char posX, int posY) {
         this.posX = posX;
         this.posY = posY;
     }
-    public piece getPiece() {
-        return piece;
+    public Piece getPiece() {
+        return Piece;
     }
     @Override
     public String toString (){
-        if (piece != null) {
-            return "[" + posX + posY + piece + "]";
+        if (Piece != null) {
+            return "[" + posX + posY + Piece + "]";
         } else {
             return "[    ]";
         }
     }
 
-    public void setPiece(piece piece) {
-        this.piece = piece;
-        piece.currentCell = this;
+    public void setPiece(Piece Piece) {
+        this.Piece = Piece;
+        Piece.currentCell = this;
     }
 }
