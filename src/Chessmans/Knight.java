@@ -1,5 +1,6 @@
 package Chessmans;
 
+import Main.Board;
 import Main.Cell;
 
 public class Knight extends Main.Chessman {
@@ -9,7 +10,7 @@ public class Knight extends Main.Chessman {
     }
 
     @Override
-    public boolean move(Cell currentCell, Cell goalCell) {
+    public boolean move(Board board, int startX, int startY, int goalX, int goalY) {
         return false;
     }
 }

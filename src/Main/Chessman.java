@@ -1,7 +1,7 @@
 package Main;
 
 public abstract class Chessman {
-    public abstract boolean move (Cell currentCell, Cell goalCell);
+    public abstract boolean move (Board board, int startX,int startY,int goalX,int goalY);
     public boolean isWhite;
     public char name;
     public boolean isMoved = false;

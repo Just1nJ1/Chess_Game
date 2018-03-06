@@ -9,6 +9,8 @@ public class Board {
         board = new Chessman[8][8];
     }
 
+
+
     public static Board factor(){
         Board board=new Board();
         boolean isWhite=false;
@@ -38,7 +40,7 @@ public class Board {
     public String toString() {
         String str = new String();
         for (int i = 0; i < 8; i++) {
-            str+="\n"+i;
+            str+="\n"+(8-i);
             for (int j = 0; j < 8; j++) {
                 if (board[i][j] != null) {
                     str+= "[ "+board[i][j]+" ]";
