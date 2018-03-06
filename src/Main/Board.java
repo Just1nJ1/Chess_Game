@@ -3,10 +3,10 @@ package Main;
 import Chessmans.*;
 
 public class Board {
-    Chessman[][] board;
+    piece[][] board;
 
     private Board() {
-        board = new Chessman[8][8];
+        board = new piece[8][8];
     }
 
 
@@ -29,9 +29,9 @@ public class Board {
         return board;
     }
 
-    private static Chessman createChess(boolean isWhite, int number){
+    private static piece createChess(boolean isWhite, int number){
         if (number>4){number=7-number;}
-        Chessman[] chessmen={new Rook(isWhite),new Knight(isWhite),new Bishop(isWhite),new Queen(isWhite),new King(isWhite)};
+        piece[] chessmen={new Rook(isWhite),new Knight(isWhite),new Bishop(isWhite),new Queen(isWhite),new King(isWhite)};
         return chessmen[number];
     }
 

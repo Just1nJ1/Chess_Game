@@ -1,6 +1,6 @@
 package Main;
 
-public abstract class Chessman {
+public abstract class piece {
     public abstract boolean move (Board board, int startX,int startY,int goalX,int goalY);
     public boolean isWhite;
     public char name;

@@ -1,9 +1,9 @@
 package Chessmans;
 
 import Main.Board;
-import Main.Cell;
+import Main.piece;
 
-public class Bishop extends Main.Chessman {
+public class Bishop extends piece {
     public Bishop (boolean isWhite) {
         super.isWhite = isWhite;
         super.name = 'B';

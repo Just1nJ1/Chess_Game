@@ -1,9 +1,5 @@
 package Main;
 
-import Chessmans.Bishop;
-
-import java.util.ArrayList;
-
 public class Game {
     Cell[][] board = new Cell[8][8];
 
@@ -19,6 +15,8 @@ public class Game {
 
         //initialChess ();
     }
+
+
 
     private void initialChess (Cell[][] board){
         boolean isWhite=true;
@@ -56,10 +54,10 @@ public class Game {
             }
             System.out.println("|");
             for (int j = 0; j < 8; j++) {
-                if (board[i][j].getChessman() == null) {
+                if (board[i][j].getPiece() == null) {
                     System.out.print("|" + "    ");
                 } else {
-                    System.out.print("|" + " " + board[i][j].getChessman() + " ");
+                    System.out.print("|" + " " + board[i][j].getPiece() + " ");
                 }
             }
             System.out.println("|");

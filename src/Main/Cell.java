@@ -3,26 +3,26 @@ package Main;
 public class Cell {
     char posX;
     int posY;
-    Chessman chessman = null;
+    piece piece = null;
 
     public Cell (char posX, int posY) {
         this.posX = posX;
         this.posY = posY;
     }
-    public Chessman getChessman() {
-        return chessman;
+    public piece getPiece() {
+        return piece;
     }
     @Override
     public String toString (){
-        if (chessman != null) {
-            return "[" + posX + posY + chessman + "]";
+        if (piece != null) {
+            return "[" + posX + posY + piece + "]";
         } else {
             return "[    ]";
         }
     }
 
-    public void setChessman(Chessman chessman) {
-        this.chessman = chessman;
-        chessman.currentCell = this;
+    public void setPiece(piece piece) {
+        this.piece = piece;
+        piece.currentCell = this;
     }
 }
