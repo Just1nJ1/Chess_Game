@@ -1,3 +1,6 @@
+import Main.Board;
+import Main.Game;
+
 public class PrintName {
     PrintName (){
         System.out.println("Vincent");
@@ -11,6 +14,8 @@ public class PrintName {
     //test2
 //
     public static void main (String... args){
-        new PrintName ();
+        System.out.print(Board.factor());
+//        a.showBoard(a.board);
     }
+
 }
