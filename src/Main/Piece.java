@@ -5,6 +5,7 @@ public abstract class Piece {//Piece on this board is move from (startX,startY) 
         if ( checkPath ( board, startX, startY, goalX, goalY ) ){
             board.getBoard ()[goalY][goalX] = board.getBoard ()[startY][startX];
             board.getBoard ()[startY][startX] = null;
+            if (!this.isMoved){ this.isMoved = true; }
             return true;
         }
 
