@@ -9,8 +9,20 @@ public class Rook extends Piece {
         super.name = 'R';
     }
 
-    @Override
-    public boolean move(Piece[][] board, int startX, int startY, int goalX, int goalY) {
-        return false;
+    public void moveRook(Piece board[][], int startX, int startY, int goalX, int goalY) {
+        if(startX == goalX){
+            for(int i=0; i<=(goalX); i++){
+                if(checkPath(board,startX,startY,goalX,goalY)){
+                    super.move(board,startX,startY,goalX,goalY);
+                }
+            }
+        }
+        else if(startY == goalY){
+            for(int i=0; i<=(goalY); i++){
+                if(checkPath(board,startX,startY,goalX,goalY)){
+                    super.move(board,startX,startY,goalX,goalY);
+                }
+            }
+        }
     }
 }
