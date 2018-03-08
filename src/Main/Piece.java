@@ -5,6 +5,7 @@ public abstract class Piece {
     public char name;
     public boolean isMoved = false;
     public Cell currentCell;
+    private boolean meetDiff = false;
 
     public boolean move (Piece board[][], int startX, int startY, int goalX, int goalY) {
         if ( checkPath ( board, startX, startY, goalX, goalY) ){
@@ -17,7 +18,10 @@ public abstract class Piece {
     }
 
     public boolean checkPath (Piece[][] board, int startX, int startY, int goalX, int goalY){
-        if (board[goalY][goalX] == null || board[goalY][goalX].isWhite != isWhite){
+        if (board[goalY][goalX] == null){
+            return true;
+        } else if (board[goalY][goalX].isWhite != isWhite && !meetDiff) {
+            meetDiff = true;
             return true;
         }
 
