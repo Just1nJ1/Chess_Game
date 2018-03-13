@@ -1,7 +1,7 @@
 package Piece;
 
-import Main.Board;
-import Main.Piece;
+        import Main.Board;
+        import Main.Piece;
 
 public class Rook extends Piece {
     public Rook (boolean isWhite) {
@@ -14,7 +14,7 @@ public class Rook extends Piece {
         boolean flag = true;
         if(startX == goalX){
             for(int i=0; i<=(goalX); i++){
-                if(!(checkPath(board,startX,startY,goalX,goalY))){
+                if(!(checkPath(board,startX,startY+i,goalX,goalY+i))){
                     return false;
                 }
             }
@@ -22,7 +22,7 @@ public class Rook extends Piece {
         }
         else if(startY == goalY){
             for(int i=0; i<=(goalY); i++){
-                if(!(checkPath(board,startX,startY,goalX,goalY))){
+                if(!(checkPath(board,startX+i,startY,goalX+i,goalY))){
                     return false;
                 }
             }
