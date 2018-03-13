@@ -1,10 +1,11 @@
 package Main;
 
+import Piece.Rook;
+
 public abstract class Piece {
-    public boolean isWhite;
-    public char name;
-    public boolean isMoved = false;
-    public Cell currentCell;
+    protected boolean isWhite;
+    protected char name;
+    protected boolean isMoved = false;
     private boolean meetDiff = false;
 
 
@@ -21,6 +22,12 @@ public abstract class Piece {
         board[startY][startX] = null;
         meetDiff = false;
         isMoved = true;
+    }
+
+    public static Piece factor(boolean isWhite, int number){
+        if (number>4){number=7-number;}
+        Piece[] chessmen={Rook.factor(isWhite), Piece.Knight.factor(isWhite),Piece.Bishop.factor(isWhite),Piece.Queen.factor(isWhite),Piece.King.factor(isWhite)};
+        return chessmen[number];
     }
 
     /**
@@ -42,7 +49,7 @@ public abstract class Piece {
 
         return false;
     }
-
+    public boolean getIsWhite(){return isWhite;}
     /**
      * last change:
      * @return Piece color and name.

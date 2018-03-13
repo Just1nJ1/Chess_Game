@@ -4,12 +4,18 @@ import Main.Board;
 import Main.Piece;
 
 public class Bishop extends Piece {
-    public Bishop (boolean isWhite) {
+    private Bishop (boolean isWhite) {
         super.isWhite = isWhite;
         super.name = 'B';
     }
 
+    public static Piece factor(boolean isWhite){
+        return new Bishop(isWhite);
+    }
+
     @Override
+    public void move(Piece[][] board, int startX, int startY, int goalX, int goalY) {}
+
     public boolean checkPath(Piece[][] board, int startX, int startY, int goalX, int goalY) {
         if(Math.abs(startX-goalX)==Math.abs(startY-goalY)){
             int dirX = 0;
