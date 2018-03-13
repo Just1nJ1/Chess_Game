@@ -4,13 +4,17 @@ import Main.Board;
 import Main.Piece;
 
 public class Pawn extends Piece {
-    public Pawn (boolean isWhite) {
+    private Pawn (boolean isWhite) {
         super.isWhite = isWhite;
         super.name = 'P';
     }
 
+    public static Piece factor(boolean isWhite){
+        return new Pawn(isWhite);
+    }
     @Override
-    public boolean move(Piece[][] board, int startX, int startY, int goalX, int goalY) {
-        return false;
+
+    public void move(Piece[][] board, int startX, int startY, int goalX, int goalY) {
+
     }
 }

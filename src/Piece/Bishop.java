@@ -4,13 +4,17 @@ import Main.Board;
 import Main.Piece;
 
 public class Bishop extends Piece {
-    public Bishop (boolean isWhite) {
+    private Bishop (boolean isWhite) {
         super.isWhite = isWhite;
         super.name = 'B';
     }
 
+    public static Piece factor(boolean isWhite){
+        return new Bishop(isWhite);
+    }
+
     @Override
-    public boolean move(Piece[][] board, int startX, int startY, int goalX, int goalY) {
-        return false;
+    public void move(Piece[][] board, int startX, int startY, int goalX, int goalY) {
+
     }
 }

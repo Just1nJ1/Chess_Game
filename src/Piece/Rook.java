@@ -4,11 +4,14 @@ package Piece;
         import Main.Piece;
 
 public class Rook extends Piece {
-    public Rook (boolean isWhite) {
+    private Rook (boolean isWhite) {
         super.isWhite = isWhite;
         super.name = 'R';
     }
 
+    public static Piece factor(boolean isWhite){
+        return new Rook(isWhite);
+    }
     @Override
     public boolean checkPath(Piece board[][], int startX, int startY, int goalX, int goalY) {
         boolean flag = true;
