@@ -4,13 +4,16 @@ import Main.Board;
 import Main.Piece;
 
 public class Knight extends Piece {
-    public Knight (boolean isWhite) {
+    private Knight (boolean isWhite) {
         super.isWhite = isWhite;
         super.name = 'N';
     }
-
+    public static Piece factor(boolean isWhite){
+        return new Knight(isWhite);
+    }
     @Override
-    public boolean move(Piece[][] board, int startX, int startY, int goalX, int goalY) {
-        return false;
+
+    public void move(Piece[][] board, int startX, int startY, int goalX, int goalY) {
+
     }
 }

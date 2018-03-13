@@ -18,23 +18,17 @@ public class Board {
         boolean isWhite=false;
         for(int hor=1,i=0;i<2;i++){
             for (int ver=0;ver<8;ver++){
-                board.board[hor][ver]=new Pawn(isWhite);
+                board.board[hor][ver]=Pawn.factor(isWhite);
             }
             if(isWhite){hor+=1;}
             else{hor-=1;}
             for (int ver=0;ver<8;ver++){
-                board.board[hor][ver]=createChess(isWhite,ver);
+                board.board[hor][ver]=Piece.factor(isWhite,ver);
             }
             isWhite=true;
             hor=6;
         }
         return board;
-    }
-
-    private static Piece createChess(boolean isWhite, int number){
-        if (number>4){number=7-number;}
-        Piece[] chessmen={new Rook(isWhite),new Knight(isWhite),new Bishop(isWhite),new Queen(isWhite),new King(isWhite)};
-        return chessmen[number];
     }
 
 

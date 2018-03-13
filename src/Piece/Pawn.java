@@ -3,14 +3,15 @@ package Piece;
 import Main.Board;
 import Main.Piece;
 
-import java.rmi.MarshalException;
-
 public class Pawn extends Piece {
     public Pawn (boolean isWhite) {
         super.isWhite = isWhite;
         super.name = 'P';
     }
 
+    public static Piece factor(boolean isWhite){
+        return new Pawn(isWhite);
+    }
     @Override
     public boolean checkPath(Piece[][] board, int startX, int startY, int goalX, int goalY) {
         int sign = isWhite ? 1 : -1;

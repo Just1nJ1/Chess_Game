@@ -9,10 +9,24 @@ public class Game {
         //initialChess ();
     }
 
+    /**
+     *
+     * @param turn
+     */
     private void move(boolean turn){
         int[] start=getLocate();
         int[] end=getLocate();
-
+        Piece chess=board.getBoard()[start[0]][start[1]];
+        if (!chess.getIsWhite()==turn){
+            move(turn);
+            return;
+        }
+        if(chess.checkPath(board.getBoard(),start[0],start[1],end[0],end[1])){
+            chess.move(board.getBoard(),start[0],start[1],end[0],end[1]);
+        }
+        else {
+            move(turn);
+        }
     }
 
     /**
@@ -35,15 +49,6 @@ public class Game {
         return output;
     }
 
-    private void initialChess (Cell[][] board){
-        boolean isWhite=true;
-        int position=board.length-1;
-        for(int i=0;i<2;i++){
-            for (int j=0;j<8;j++){
-                //board[][]
-            }
-        }
-    }
 
 
     @Override
