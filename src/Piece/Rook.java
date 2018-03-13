@@ -1,7 +1,7 @@
 package Piece;
 
-import Main.Board;
-import Main.Piece;
+        import Main.Board;
+        import Main.Piece;
 
 public class Rook extends Piece {
     public Rook (boolean isWhite) {
@@ -10,27 +10,24 @@ public class Rook extends Piece {
     }
 
     @Override
-    public void move(Piece board[][], int startX, int startY, int goalX, int goalY) {
+    public boolean checkPath(Piece board[][], int startX, int startY, int goalX, int goalY) {
         boolean flag = true;
         if(startX == goalX){
             for(int i=0; i<=(goalX); i++){
-                if(!(checkPath(board,startX,startY,goalX,goalY))){
-                    flag = false;
+                if(!(checkPath(board,startX,startY+i,goalX,goalY+i))){
+                    return false;
                 }
             }
-            if(flag == true){
-                super.move(board,startX,startY,goalX,goalY);
-            }
+            super.move(board,startX,startY,goalX,goalY);
         }
         else if(startY == goalY){
             for(int i=0; i<=(goalY); i++){
-                if(!(checkPath(board,startX,startY,goalX,goalY))){
-                    flag = false;
+                if(!(checkPath(board,startX+i,startY,goalX+i,goalY))){
+                    return false;
                 }
             }
-            if(flag == true){
-                super.move(board,startX,startY,goalX,goalY);
-            }
+            super.move(board,startX,startY,goalX,goalY);
         }
+        return false;
     }
 }
