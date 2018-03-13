@@ -15,24 +15,19 @@ public class Rook extends Piece {
         if(startX == goalX){
             for(int i=0; i<=(goalX); i++){
                 if(!(checkPath(board,startX,startY,goalX,goalY))){
-                    flag = false;
+                    return false;
                 }
             }
-            if(flag == true){
-                super.move(board,startX,startY,goalX,goalY);
-            }
+            super.move(board,startX,startY,goalX,goalY);
         }
         else if(startY == goalY){
             for(int i=0; i<=(goalY); i++){
                 if(!(checkPath(board,startX,startY,goalX,goalY))){
-                    flag = false;
+                    return false;
                 }
             }
-            if(flag == true){
-                super.move(board,startX,startY,goalX,goalY);
-            }
+            super.move(board,startX,startY,goalX,goalY);
         }
-
         return false;
     }
 }
