@@ -10,7 +10,7 @@ public class Rook extends Piece {
     }
 
     @Override
-    public void move(Piece board[][], int startX, int startY, int goalX, int goalY) {
+    public boolean checkPath(Piece board[][], int startX, int startY, int goalX, int goalY) {
         boolean flag = true;
         if(startX == goalX){
             for(int i=0; i<=(goalX); i++){
@@ -32,5 +32,7 @@ public class Rook extends Piece {
                 super.move(board,startX,startY,goalX,goalY);
             }
         }
+
+        return false;
     }
 }
