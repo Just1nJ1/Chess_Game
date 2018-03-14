@@ -17,7 +17,13 @@ public class Game {
         int[] start=getLocate();
         int[] end=getLocate();
         Piece chess=board.getBoard()[start[0]][start[1]];
+        if (chess==null){
+            System.out.print("no chess");
+            move(turn);
+            return;
+        }
         if (!chess.getIsWhite()==turn){
+            System.out.print("wrong chess");
             move(turn);
             return;
         }
@@ -25,6 +31,7 @@ public class Game {
             chess.move(board.getBoard(),start[0],start[1],end[0],end[1]);
         }
         else {
+            System.out.print("illegal path");
             move(turn);
         }
     }
