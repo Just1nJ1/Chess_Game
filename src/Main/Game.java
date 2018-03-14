@@ -2,6 +2,7 @@ package Main;
 import java.util.Scanner;
 public class Game {
     Board board;
+    static Scanner scanner = new Scanner ( System.in );
 
     public Game (){
         board=Board.factor();
@@ -14,7 +15,7 @@ public class Game {
      * @param turn
      */
     public void move(boolean turn){
-        System.out.print("type");
+        System.out.println("Choose a piece (etc '1a'): ");
         int[] start=getLocate();
         int[] end=getLocate();
         Piece chess=board.getBoard()[start[1]][start[0]];
@@ -42,7 +43,6 @@ public class Game {
      * @return
      */
     private int[] getLocate(){
-        Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         if (input.length()!=2){
             System.out.print("wrong input");
