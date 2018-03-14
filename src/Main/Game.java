@@ -14,9 +14,10 @@ public class Game {
      * @param turn
      */
     private void move(boolean turn){
+        System.out.print("type");
         int[] start=getLocate();
         int[] end=getLocate();
-        Piece chess=board.getBoard()[start[0]][start[1]];
+        Piece chess=board.getBoard()[start[1]][start[0]];
         if (chess==null){
             System.out.print("no chess");
             move(turn);
@@ -42,14 +43,15 @@ public class Game {
      */
     private int[] getLocate(){
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.next();
+        String input = scanner.nextLine();
         if (input.length()!=2){
             System.out.print("wrong input");
             return getLocate();
         }
-        int hor=Integer.valueOf((input.substring(0,1)));
-        int ver=(input.substring(0,1)).charAt(1)-97;
+        int ver=8-Integer.valueOf((input.substring(0,1)));
+        int hor=input.charAt(1)-97;
         if (hor>8||hor<0||ver>8||ver<0){
+            System.out.print("wrong input");
             return getLocate();
         }
         int[] output={hor,ver};

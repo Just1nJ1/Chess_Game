@@ -1,6 +1,6 @@
 package Main;
 
-import Piece.Rook;
+import Piece.*;
 
 public abstract class Piece {
     protected boolean isWhite;
@@ -26,7 +26,7 @@ public abstract class Piece {
 
     public static Piece factor(boolean isWhite, int number){
         if (number>4){number=7-number;}
-        Piece[] chessmen={Rook.factor(isWhite), Piece.Knight.factor(isWhite),Piece.Bishop.factor(isWhite),Piece.Queen.factor(isWhite),Piece.King.factor(isWhite)};
+        Piece[] chessmen={Rook.factor(isWhite), Knight.factor(isWhite),Bishop.factor(isWhite),Queen.factor(isWhite),King.factor(isWhite)};
         return chessmen[number];
     }
 

@@ -23,6 +23,5 @@ public class Cell {
 
     public void setPiece(Piece Piece) {
         this.Piece = Piece;
-        Piece.currentCell = this;
     }
 }

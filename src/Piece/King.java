@@ -30,15 +30,14 @@ public class King extends Piece {
                     if (move = true) {
                         super.move(board, startX, startY, goalX, goalY);
                     }
-                } else if (!(super.checkPath(board, startX, startY, goalX, goalY)))
+                } else if (!(super.checkPath(board, startX, startY, goalX, goalY))){
                     if (move = true) {
                         super.move(board, startX, startY, goalX, goalY);
                     }
+                }
             }
         }
         return false;
     }
-    public void move(Piece[][] board, int startX, int startY, int goalX, int goalY) {
 
-    }
 }
