@@ -13,7 +13,7 @@ public class Game {
      *
      * @param turn
      */
-    private void move(boolean turn){
+    public void move(boolean turn){
         System.out.print("type");
         int[] start=getLocate();
         int[] end=getLocate();

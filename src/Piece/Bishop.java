@@ -14,8 +14,6 @@ public class Bishop extends Piece {
     }
 
     @Override
-    public void move(Piece[][] board, int startX, int startY, int goalX, int goalY) {}
-
     public boolean checkPath(Piece[][] board, int startX, int startY, int goalX, int goalY) {
         if(Math.abs(startX-goalX)==Math.abs(startY-goalY)){
             int dirX = 0;

@@ -11,9 +11,4 @@ public class Knight extends Piece {
     public static Piece factor(boolean isWhite){
         return new Knight(isWhite);
     }
-    @Override
-
-    public void move(Piece[][] board, int startX, int startY, int goalX, int goalY) {
-
-    }
 }
