@@ -30,16 +30,14 @@ public class Bishop extends Piece {
             if(goalY-startY<0){
                 dirY=-1;
             }
-            if(goalX-startX==goalY-startY){
-                for(int i=0;i<=goalX;i++){
-                    if(!(super.checkPath(board, startX, startY, startX+(i*dirX), startY+(i*dirY)))){
-                        return false;
-                    }
-                    if(i==goalX){
-                        return true;
-                    }
+            for(int i=0;i<=goalX;i++){
+                if(!(super.checkPath(board, startX, startY, startX+(i*dirX), startY+(i*dirY)))){
+                    return false;
                 }
-            }
+                if(i==goalX){
+                    return true;
+                }
+                }
         }
         return false;
     }

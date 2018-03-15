@@ -3,12 +3,7 @@ import Main.Game;
 
 public class test {
     public static void main(String... args){
-        System.out.print(Board.factor());
+        Game test1 = new Game();
+        System.out.println(test1);
     }
-
 }
-//
-// ---------
-//| B1 |    |
-//| BK |    |
-// ---------
