@@ -12,8 +12,4 @@ public class Queen extends Piece {
     public static Piece factor(boolean isWhite){
         return new Queen(isWhite);
     }
-    @Override
-    public void move(Piece[][] board, int startX, int startY, int goalX, int goalY) {
-
-    }
 }

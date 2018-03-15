@@ -16,6 +16,7 @@ public class Pawn extends Piece {
     public boolean checkPath(Piece[][] board, int startX, int startY, int goalX, int goalY) {
         int sign = isWhite ? 1 : -1;
         if ( startX == goalX ) {
+            if ((startY - goalY) * sign > 2){ return false; }
             if ((startY - goalY) * sign > 1){
                 return !isMoved;
             }
