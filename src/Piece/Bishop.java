@@ -16,29 +16,14 @@ public class Bishop extends Piece {
     @Override
     public boolean checkPath(Piece[][] board, int startX, int startY, int goalX, int goalY) {
         if(Math.abs(startX-goalX)==Math.abs(startY-goalY)){
-            int dirX = 0;
-            int dirY = 0;
-            if(goalX-startX>0){
-                dirX=1;
-            }
-            if(goalX-startX<0){
-                dirX=-1;
-            }
-            if(goalY-startY>0){
-                dirY=1;
-            }
-            if(goalY-startY<0){
-                dirY=-1;
-            }
-            for(int i=0;i<=goalX;i++){
-                if(!(super.checkPath(board, startX, startY, startX+(i*dirX), startY+(i*dirY)))){
-                    return false;
+            int dirX = (goalX-startX) / Math.abs(goalX-startX);
+            int dirY = (goalY-startY) / Math.abs(goalY-startY);
+            for(int i=startX; i!=goalX; i+=dirX){
+                    if (!(super.checkPath(board, startX, startY, startX + (i * dirX), startY + (i * dirY)))) {
+                        return false;
+                    }
                 }
-                if(i==goalX){
-                    return true;
-                }
-                }
-        }
+            }
         return false;
     }
 }
