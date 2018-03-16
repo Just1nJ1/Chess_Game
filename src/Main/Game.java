@@ -11,9 +11,10 @@ public class Game {
 
     /**
      *
-     * @param turn
+     * @param startP
+     * @param startE
      */
-    public void move(String startP,String startE,boolean turn){
+    public void move(String startP,String startE){
         System.out.print("type");
         int[] start=getLocate(startP);
         int[] end=getLocate(startE);
