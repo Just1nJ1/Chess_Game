@@ -18,6 +18,7 @@ public abstract class Piece {
      * @param goalY
      */
     public void move (Piece board[][], int startX, int startY, int goalX, int goalY) {
+        if (board[goalY][goalX] != null){ board[goalY][goalX].remove(); }
         board[goalY][goalX] = board[startY][startX];
         board[startY][startX] = null;
         meetDiff = false;
@@ -50,6 +51,11 @@ public abstract class Piece {
         return false;
     }
     public boolean getIsWhite(){return isWhite;}
+
+    public void remove (){
+        System.out.println ( this + "is removed." );
+    }
+
     /**
      * last change:
      * @return Piece color and name.
