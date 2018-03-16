@@ -14,22 +14,32 @@ public class Rook extends Piece {
     }
     @Override
     public boolean checkPath(Piece board[][], int startX, int startY, int goalX, int goalY) {
-        boolean flag = true;
-        if(startX == goalX){
-            for(int i=0; i<=(goalX); i++){
-                if(!(checkPath(board,startX,startY+i,goalX,goalY+i))){
-                    return false;
+//        boolean flag = true;
+//        if(startX == goalX){
+//            for(int i=0; i<=(goalX-startX); i++){
+//                if(!(checkPath(board,startX,startY,goalX,startY+i))){
+//                    return false;
+//                }
+//            }
+//            super.move(board,startX,startY,goalX,goalY);
+//        }
+//        else if(startY == goalY){
+//            for(int i=0; i<=(goalY-startY); i++){
+//                if(!(checkPath(board,startX,startY,startX+i,startY))){
+//                    return false;
+//                }
+//            }
+//            super.move(board,startX,startY,goalX,goalY);
+//        }
+        if(startX == goalX | startY == goalY){
+            int x = goalX - startX;
+            int y = goalY - startY;
+            if(x != 0){
+                int tempStartX = startX;
+                for(int i=0; i != Math.abs(x); i++){
+                    checkPath(board,startX,startY,startX,startY);
                 }
             }
-            super.move(board,startX,startY,goalX,goalY);
-        }
-        else if(startY == goalY){
-            for(int i=0; i<=(goalY); i++){
-                if(!(checkPath(board,startX+i,startY,goalX+i,goalY))){
-                    return false;
-                }
-            }
-            super.move(board,startX,startY,goalX,goalY);
         }
         return false;
     }
