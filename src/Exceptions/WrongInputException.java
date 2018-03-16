@@ -1,15 +1,15 @@
 package Exceptions;
 
 public class WrongInputException extends Exception{
-    WrongInputException (){
+    public WrongInputException (){
         super();
     }
 
-    WrongInputException (String message){
+    public WrongInputException (String message){
         super(message);
     }
 
-    WrongInputException (String message, Throwable cause){
+    public WrongInputException (String message, Throwable cause){
         super(message, cause);
     }
 }

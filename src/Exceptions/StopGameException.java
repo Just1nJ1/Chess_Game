@@ -1,15 +1,15 @@
 package Exceptions;
 
 public class StopGameException extends Exception{
-    StopGameException (){
+    public StopGameException (){
         super();
     }
 
-    StopGameException (String message){
+    public StopGameException (String message){
         super(message);
     }
 
-    StopGameException (String message, Throwable cause){
+    public StopGameException (String message, Throwable cause){
         super(message, cause);
     }
 }

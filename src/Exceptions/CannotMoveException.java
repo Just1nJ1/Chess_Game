@@ -1,15 +1,15 @@
 package Exceptions;
 
 public class CannotMoveException extends Exception{
-    CannotMoveException (){
+    public CannotMoveException (){
         super();
     }
 
-    CannotMoveException (String message){
+    public CannotMoveException (String message){
         super(message);
     }
 
-    CannotMoveException (String message, Throwable cause){
+    public CannotMoveException (String message, Throwable cause){
         super(message, cause);
     }
 }
