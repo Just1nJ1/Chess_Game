@@ -11,7 +11,8 @@ public class Game {
 
     /**
      *
-     * @param turn
+     * @param startP
+     * @param startE
      */
     public void move(String startP,String startE){
         System.out.print("type");
