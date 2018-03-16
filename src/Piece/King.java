@@ -1,5 +1,6 @@
 package Piece;
 
+import Exceptions.StopGameException;
 import Main.Board;
 import Main.Piece;
 
@@ -12,7 +13,7 @@ public class King extends Piece {
         return new King(isWhite);
     }
     @Override
-    public boolean checkPath(Piece[][] board, int startX, int startY, int goalX, int goalY) {
+    public boolean checkPath(Piece[][] board, int startX, int startY, int goalX, int goalY) throws StopGameException {
         boolean move = true;
         if (goalX == startX + 1 || goalX == startX - 1 || goalX == startX) {
             if (goalY == startY + 1 || goalY == startY - 1 || goalY == startY) {
@@ -38,6 +39,12 @@ public class King extends Piece {
             }
         }
         return false;
+    }
+
+    @Override
+    public void remove() throws StopGameException {
+        super.remove ();
+        throw new StopGameException ();
     }
 
 }
