@@ -1,6 +1,6 @@
 package Main;
 
-import Exceptions.StopGameException;
+import Exceptions.GameOverException;
 import Piece.*;
 
 public abstract class Piece {
@@ -18,7 +18,7 @@ public abstract class Piece {
      * @param goalX
      * @param goalY
      */
-    public void move (Piece board[][], int startX, int startY, int goalX, int goalY) throws StopGameException{
+    public void move (Piece board[][], int startX, int startY, int goalX, int goalY) throws GameOverException {
         if (board[goalY][goalX] != null){ board[goalY][goalX].remove(); }
         board[goalY][goalX] = board[startY][startX];
         board[startY][startX] = null;
@@ -53,8 +53,8 @@ public abstract class Piece {
     }
     public boolean getIsWhite(){return isWhite;}
 
-    public void remove () throws StopGameException {
-        System.out.println ( this + "is removed." );
+    public void remove () throws GameOverException {
+        System.out.println ( this + " is removed." );
     }
 
     /**

@@ -1,6 +1,8 @@
 package Piece;
 
+import Exceptions.GameOverException;
 import Main.Board;
+import Main.Game;
 import Main.Piece;
 
 public class King extends Piece {
@@ -13,15 +15,15 @@ public class King extends Piece {
     }
     @Override
     public boolean checkPath(Piece[][] board, int startX, int startY, int goalX, int goalY) {
-        boolean move = false;
-        if (Math.abs(goalX-startX)<2) {
-            if (Math.abs(goalY-startY)<2) {
-                move = true;
-                }
-            else {
-                move = false;
-            }
-            }
+        if (Math.abs(goalX-startX)<2 && Math.abs(goalY-startY)<2) {
+            return super.checkPath ( board, startX, startY, goalX, goalY );
+        }
         return false;
+    }
+
+    @Override
+    public void remove () throws GameOverException {
+        super.remove ();
+        throw new GameOverException ( "Game is Over." );
     }
 }
