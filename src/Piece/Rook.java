@@ -16,21 +16,31 @@ public class Rook extends Piece {
     public boolean checkPath(Piece board[][], int startX, int startY, int goalX, int goalY) {
         boolean flag = true;
         if(startX == goalX){
-            for(int i=0; i<=(goalX); i++){
-                if(!(checkPath(board,startX,startY+i,goalX,goalY+i))){
+            for(int i=0; i <= Math.abs(goalX-startX); i++){
+                if(!(checkPath(board,startX,startY,goalX,startY + ((goalX-startX)/Math.abs(goalX-startX))*i))){
                     return false;
                 }
             }
             super.move(board,startX,startY,goalX,goalY);
         }
         else if(startY == goalY){
-            for(int i=0; i<=(goalY); i++){
-                if(!(checkPath(board,startX+i,startY,goalX+i,goalY))){
+            for(int i=0; i<=Math.abs(goalY-startY); i++){
+                if(!(checkPath(board,startX,startY,startX + ((goalX-startX)/Math.abs(goalX-startX))*i,startY))){
                     return false;
                 }
             }
             super.move(board,startX,startY,goalX,goalY);
         }
+//        if(startX == goalX | startY == goalY){
+//            int x = goalX - startX;
+//            int y = goalY - startY;
+//            if(x != 0){
+//                int tempStartX = startX;
+//                for(int i=0; i != Math.abs(x); i++){
+//                    checkPath(board,startX,startY,startX,startY);
+//                }
+//            }
+//        }
         return false;
     }
 }

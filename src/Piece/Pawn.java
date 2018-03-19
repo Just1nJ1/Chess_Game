@@ -17,11 +17,11 @@ public class Pawn extends Piece {
         int sign = isWhite ? 1 : -1;
         if ( startX == goalX ) {
             if ((startY - goalY) * sign > 2){ return false; }
-            if ((startY - goalY) * sign > 1){
-                return !isMoved;
-            }
+            if ((startY - goalY) * sign > 1){ return !isMoved; }
+
         } else if (Math.abs ( startX - goalX ) > 1) { return false; }
         else if ((startY - goalY) * sign > 1) { return false; }
+        else if (board[goalY][goalX] == null){ return false; }
         return true;
 
     }

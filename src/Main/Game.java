@@ -15,7 +15,6 @@ public class Game {
      * @param startE
      */
     public void move(String startP,String startE){
-        System.out.print("type");
         int[] start=getLocate(startP);
         int[] end=getLocate(startE);
         Piece chess=board.getBoard()[start[1]][start[0]];
