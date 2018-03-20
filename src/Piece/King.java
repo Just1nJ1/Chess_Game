@@ -17,6 +17,21 @@ public class King extends Piece {
     public boolean checkPath(Piece[][] board, int startX, int startY, int goalX, int goalY) {
         if (Math.abs(goalX-startX)<2 && Math.abs(goalY-startY)<2) {
             return super.checkPath ( board, startX, startY, goalX, goalY );
+        } else if (startY == goalY && !isMoved && Math.abs ( goalX - startX ) == 2){
+            int dir = (goalX - startX) / Math.abs ( goalX - startX );
+            int i = startX + dir;
+            for (; i != goalX + dir && i != 0 && i != 7; i += dir){
+                if (null != board[startY][i]){
+                    return false;
+                }
+            }
+            if (board[startY][i].isMoved){
+                return false;
+            }
+            try {
+                super.move ( board, i, startY, startX + dir , goalY );
+            } catch (GameOverException e){}
+            return true;
         }
         return false;
     }

@@ -6,7 +6,7 @@ import Piece.*;
 public abstract class Piece {
     protected boolean isWhite;
     protected char name;
-    protected boolean isMoved = false;
+    public boolean isMoved = false;
     private boolean meetDiff = false;
 
 

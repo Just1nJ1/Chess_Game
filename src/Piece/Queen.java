@@ -15,7 +15,7 @@ public class Queen extends Piece {
 
     @Override
     public boolean checkPath (Piece[][] board, int startX, int startY, int goalX, int goalY) {
-        if (Bishop.factor ( isWhite ).checkPath ( board, startX, startY, goalX, goalY ) && Rook.factor ( isWhite ).checkPath ( board, startX, startY, goalX, goalY )){ return true; }
+        if (Bishop.factor ( isWhite ).checkPath ( board, startX, startY, goalX, goalY ) || Rook.factor ( isWhite ).checkPath ( board, startX, startY, goalX, goalY )){ return true; }
         return false;
     }
 }
