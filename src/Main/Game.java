@@ -18,7 +18,7 @@ public class Game {
      * @param startP
      * @param startE
      */
-    public void move(String startP,String startE) throws CannotMoveException, WrongInputException{
+    public void move(String startP,String startE) throws CannotMoveException, WrongInputException, GameOverException{
         int[] start=getLocate(startP);
         int[] end=getLocate(startE);
         Piece chess=board.getBoard()[start[1]][start[0]];
@@ -30,12 +30,7 @@ public class Game {
         }
         if(chess.checkPath(board.getBoard(),start[0],start[1],end[0],end[1])){
             turn=!turn;
-            try {
-                chess.move(board.getBoard(),start[0],start[1],end[0],end[1]);
-            } catch (GameOverException e){
-                e.printStackTrace ();
-                return;//TODO: 结束游戏
-            }
+            chess.move(board.getBoard(),start[0],start[1],end[0],end[1]);
         }
         else {
             throw new WrongInputException (  );//TODO: 重新运行方法
