@@ -20,7 +20,7 @@ public class King extends Piece {
         } else if (startY == goalY && !isMoved && Math.abs ( goalX - startX ) == 2){
             int dir = (goalX - startX) / Math.abs ( goalX - startX );
             int i = startX + dir;
-            for (; i != goalX + dir && i != 0 && i != 7; i += dir){
+            for (; i != 0 && i != 7; i += dir){
                 if (null != board[startY][i]){
                     return false;
                 }
