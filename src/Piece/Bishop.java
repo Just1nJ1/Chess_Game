@@ -18,7 +18,7 @@ public class Bishop extends Piece {
         if(Math.abs(startX-goalX)==Math.abs(startY-goalY)){
             int dirX = (goalX-startX) / Math.abs(goalX-startX);
             int dirY = (goalY-startY) / Math.abs(goalY-startY);
-            for(int i=startX; i!=goalX; i+=dirX){
+            for(int i=1; i!=Math.abs(goalX-startX)+1; i+=dirX){
                 if (!(super.checkPath(board, startX, startY, startX + (i * dirX), startY + (i * dirY)))) {
                     return false;
                 }
