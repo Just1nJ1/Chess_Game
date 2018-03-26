@@ -17,7 +17,7 @@ public class Client {
         game = new Game ();
         scanner = new Scanner ( System.in );
         while (flag) {
-            System.out.println ( game + "\n\n" );
+            System.out.println ( game + "\n\n" +game.getTurn());
             try {
                 game.move ( scanner.nextLine (), scanner.nextLine () );
             } catch (WrongInputException e){
