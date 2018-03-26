@@ -37,9 +37,6 @@ public class Game {
         }
     }
 
-    public void checkInput(){
-        
-    }
 
     /**
      *

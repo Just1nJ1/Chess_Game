@@ -20,9 +20,7 @@ public class Client {
             System.out.println ( game + "\n\n" +game.getTurn());
             try {
                 game.move ( scanner.nextLine (), scanner.nextLine () );
-            } catch (WrongInputException e){
-                e.printStackTrace ();
-            } catch (CannotMoveException e){
+            } catch (WrongInputException | CannotMoveException e){
                 e.printStackTrace ();
             } catch (GameOverException e){
                 flag = false;
