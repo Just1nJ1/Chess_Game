@@ -44,8 +44,8 @@ public class Game {
      */
 
     public String getTurn(){
-        if (turn){return "white";}
-        else return "black";
+        if (turn){ return "white"; }
+        else { return "black"; }
     }
     private int[] getLocate(String input) throws WrongInputException{
         if (input.length()!=2){
