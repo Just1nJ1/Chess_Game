@@ -17,7 +17,8 @@ public class Pawn extends Piece {
         int sign = isWhite ? 1 : -1;
         if ( startX == goalX ) {
             if ((startY - goalY) * sign > 2){ return false; }
-            if ((startY - goalY) * sign > 1){ return !isMoved; }
+            if ((startY - goalY) * sign > 0){
+                return !isMoved && board[startY - sign][startX] == null && board[goalY][startX] == null; }
 
         } else if (Math.abs ( startX - goalX ) > 1) { return false; }
         else if ((startY - goalY) * sign > 1) { return false; }

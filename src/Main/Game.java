@@ -37,12 +37,19 @@ public class Game {
         }
     }
 
+    public void checkInput(){
+        
+    }
+
     /**
      *
      * @return
      */
 
-
+    public String getTurn(){
+        if (turn){return "white";}
+        else return "black";
+    }
     private int[] getLocate(String input) throws WrongInputException{
         if (input.length()!=2){
             throw new WrongInputException ( "Length should be 2. " );
