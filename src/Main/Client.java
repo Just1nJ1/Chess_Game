@@ -21,7 +21,7 @@ public class Client {
             try {
                 game.move ( scanner.nextLine (), scanner.nextLine () );
             } catch (WrongInputException | CannotMoveException e){
-                e.printStackTrace ( System.out );
+                System.out.println ( e );
             } catch (GameOverException e){
                 flag = false;
             }
