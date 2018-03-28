@@ -19,8 +19,9 @@ public class Pawn extends Piece {
         if ((goalY - startY) * sign <= 0) { return false; }
         if ( startX == goalX ) {
             if ((goalY - startY) * sign > 2){ return false; }
+            if ((goalY - startY) * sign > 1){ return !isMoved && board[startY + sign][startX] == null && board[goalY][startX] == null; }
             if ((goalY - startY) * sign > 0){
-                return !isMoved && board[startY + sign][startX] == null && board[goalY][startX] == null;
+                return board[startY + sign][startX] == null && board[goalY][startX] == null;
             }
             return false;
 

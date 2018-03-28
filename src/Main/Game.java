@@ -47,12 +47,21 @@ public class Game {
         if (turn){ return "white"; }
         else { return "black"; }
     }
+
+    public boolean getTurnBoolean(){ return turn; }
+
     private int[] getLocate(String input) throws WrongInputException{
         if (input.length()!=2){
             throw new WrongInputException ( "Length should be 2. " );
         }
-        int ver=8-Integer.valueOf((input.substring(1)));
-        int hor=input.charAt(0)-97;
+        int ver = 0;
+        int hor = 0;
+        try {
+            ver=8-Integer.valueOf((input.substring(1)));
+            hor=input.charAt(0)-97;
+        } catch (NumberFormatException e) {
+            throw new WrongInputException ( "Input should like 'a1'" );
+        }
         if (hor>7||hor<0||ver>7||ver<0){
             throw new WrongInputException ( "Position should on the board. " );
         }
