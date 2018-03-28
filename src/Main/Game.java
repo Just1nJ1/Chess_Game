@@ -16,11 +16,11 @@ public class Game {
     /**
      *
      * @param startP
-     * @param startE
+     * @param endE
      */
-    public void move(String startP,String startE) throws CannotMoveException, WrongInputException, GameOverException{
+    public void move(String startP,String endE) throws CannotMoveException, WrongInputException, GameOverException{
         int[] start=getLocate(startP);
-        int[] end=getLocate(startE);
+        int[] end=getLocate(endE);
         Piece chess=board.getBoard()[start[1]][start[0]];
         if (chess==null){
             throw new CannotMoveException ( "No Chess" );
@@ -51,8 +51,8 @@ public class Game {
         if (input.length()!=2){
             throw new WrongInputException ( "Length should be 2. " );
         }
-        int ver=8-Integer.valueOf((input.substring(0,1)));
-        int hor=input.charAt(1)-97;
+        int ver=8-Integer.valueOf((input.substring(1)));
+        int hor=input.charAt(0)-97;
         if (hor>7||hor<0||ver>7||ver<0){
             throw new WrongInputException ( "Position should on the board. " );
         }
