@@ -50,7 +50,10 @@ public class Game {
 
     public boolean getTurnBoolean(){ return turn; }
 
-    private int[] getLocate(String input) throws WrongInputException{
+    private int[] getLocate(String input) throws WrongInputException,GameOverException{
+        if(input.equalsIgnoreCase("end")){
+            throw new GameOverException("Game end");
+        }
         if (input.length()!=2){
             throw new WrongInputException ( "Length should be 2. " );
         }
