@@ -23,7 +23,6 @@ public class Client {
         while (flag) {
             System.out.println ( game + "\n\n" +game.getTurn());
             try {
-                FileWriter fw=new FileWriter(file);
                 String start=scanner.nextLine();
                 String end=scanner.nextLine();
                 game.move ( start,  end );
@@ -32,8 +31,6 @@ public class Client {
             } catch (GameOverException e){
                 System.out.print(e);
                 flag = false;
-            }
-            catch (IOException e){
             }
         }
     }

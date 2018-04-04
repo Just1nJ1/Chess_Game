@@ -12,24 +12,24 @@ public class Test {
         BufferedReader br = null;
         Game game = new Game ();
         try {
-            br = new BufferedReader ( new FileReader ( new File ( "/Users/justin_ji/Desktop/test.txt" ) ) );
+            br = new BufferedReader ( new FileReader ( new File ( "/Users/wangxia/Desktop/Chess_test.txt" ) ) );
         } catch (FileNotFoundException e) {
             e.printStackTrace ();
         }
 
         boolean flag = true;
-        String start = null;
-        String end = null;
+        String input=null;
         while ( flag ) {
             try {
-                if ( (start = br.readLine ()) == null || (end = br.readLine ()) == null ) {
+                if ( (input = br.readLine ()) == null  ) {
                     break;
                 }
-                game.move ( start, end );
+                game.move ( input.split(",")[0], input.split(",")[1] );
                 System.out.println ( game + "\n\n\n" );
             } catch (WrongInputException | CannotMoveException e){
                 System.out.println ( e );
             } catch (GameOverException e){
+                System.out.print(e);
                 flag = false;
             } catch (IOException e) {
                 e.printStackTrace ();
