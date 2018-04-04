@@ -12,6 +12,7 @@ public class Test {
         BufferedReader br = null;
         Game game = new Game ();
         try {
+            //change the location in the next line to test
             br = new BufferedReader ( new FileReader ( new File ( "/Users/wangxia/Desktop/Chess_test.txt" ) ) );
         } catch (FileNotFoundException e) {
             e.printStackTrace ();
