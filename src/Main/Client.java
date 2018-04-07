@@ -16,7 +16,7 @@ public class Client {
     static Game game;
     static Scanner scanner;
     public static void main (String... args) {
-        File file=new File("/Users/wangxia/Desktop/Chess_test.txt");
+        File file=new File("/Users/26303/Desktop/test.txt");
         boolean flag = true;
         game = new Game ();
         scanner = new Scanner ( System.in );

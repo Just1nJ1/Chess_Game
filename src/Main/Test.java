@@ -13,7 +13,7 @@ public class Test {
         Game game = new Game ();
         try {
             //change the location in the next line to test
-            br = new BufferedReader ( new FileReader ( new File ( "/Users/wangxia/Desktop/Chess_test.txt" ) ) );
+            br = new BufferedReader ( new FileReader ( new File ( "/Users/26303/Desktop/test.txt" ) ) );
         } catch (FileNotFoundException e) {
             e.printStackTrace ();
         }
